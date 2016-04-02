@@ -17,4 +17,18 @@ public final class StagValues {
 	public static final double initDefenseTime = 1;
 	
 	public static final double initBrushSpeed = 0.4;
+	
+	public static final double shooterPower = 1;
+	public static final double shooterTime = 0.2;
+	public static final double clampPower = -0.5;
+	public static final double clampTime = 0.5;
 }
+
+
+/*
+double shooterPower = 1;
+	double shooterTime = 0.2;
+	double clampPower = -0.5;
+	double clampTime = 0.5;
+
+*/

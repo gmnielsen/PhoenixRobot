@@ -47,5 +47,19 @@ public class StagKicker extends Subsystem {
         // Set the default command for a subsystem here.
         // setDefaultCommand(new MySpecialCommand());
     }
+    
+ public void on(double speed){
+    	
+	 	front.set(StagValues.shooterPower);
+	   	rear.set(StagValues.shooterPower);
+	   	
+    }
+    
+    public void stop(){
+
+    	
+    	front.set(0);
+    	rear.set(0);
+    }
 }
 
