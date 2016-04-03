@@ -1,4 +1,4 @@
-package src.org.usfirst.frc5265.Phoenix.subsystems;
+package org.usfirst.frc5265.Phoenix.subsystems;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.smartdashboard.*;
