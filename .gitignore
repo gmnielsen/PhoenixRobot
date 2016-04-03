@@ -1,1 +1,10 @@
 **/bin/
+*.class
+
+*.jar
+*.war
+*.ear
+
+*.java~
+
+hs_err_pid*
