@@ -8,3 +8,9 @@
 *.java~
 
 hs_err_pid*
+
+*.classpath
+*.project
+*.txt
+*.xml
+*.properties
