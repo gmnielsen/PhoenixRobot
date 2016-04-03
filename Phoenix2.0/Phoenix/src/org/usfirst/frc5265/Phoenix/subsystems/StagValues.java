@@ -1,4 +1,4 @@
-package org.usfirst.frc5265.Phoenix.subsystems;
+package src.org.usfirst.frc5265.Phoenix.subsystems;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.smartdashboard.*;
@@ -44,7 +44,13 @@ public final class StagValues extends Subsystem {
 		public static String camFront = "cam0";
 	    public static String camBack = "cam1";
 	    public static String camAlt = "cam2";
-
+	    
+	// ARM pot values
+	    public static final double initPosStart = .5;
+	    public static final double initPosBall = .5;
+	    public static final double initPosLow = .5;
+	    public static final double initPosChange = .5;
+	    
     
 	
 	// default INITALIZATIONS begin here
@@ -73,6 +79,11 @@ public final class StagValues extends Subsystem {
     	SmartDashboard.putNumber("pwr4Shooter", initShooterPower);
     	SmartDashboard.putNumber("time4Clamp", initClampTime);	
     	SmartDashboard.putNumber("pwr4Clamp", initClampPower);
+    	//ARM
+    	SmartDashboard.putNumber("posBall", initPosBall);
+    	SmartDashboard.putNumber("posStart", initPosStart);
+    	SmartDashboard.putNumber("posLow", initPosLow);
+    	SmartDashboard.putNumber("posChange", initPosChange);
 	}
 }
 
