@@ -17,6 +17,7 @@ import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.Victor;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 
 /**
@@ -49,15 +50,11 @@ public class StagKicker extends Subsystem {
     }
     
  public void on(double speed){
-    	
-	 	front.set(StagValues.shooterPower);
-	   	rear.set(StagValues.shooterPower);
-	   	
-    }
+	 	front.set(speed);
+	   	rear.set(speed);
+	}
     
     public void stop(){
-
-    	
     	front.set(0);
     	rear.set(0);
     }

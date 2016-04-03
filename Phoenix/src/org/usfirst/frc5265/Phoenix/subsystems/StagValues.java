@@ -1,34 +1,79 @@
 package org.usfirst.frc5265.Phoenix.subsystems;
 
-public final class StagValues {
+import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.smartdashboard.*;
+
+public final class StagValues extends Subsystem {
 	
-	public static final double initDist2Defense = 1.5;
+	// DISTANCES for working with defenses
+	// Distance to the slope that begins every defense
+		public static final double initDist2Defense = 1.5;
+		// We are adding the above distance, to the distance to actually get to the obstacle
+			public static final double initDist2Wall = initDist2Defense + 1.5;
+			public static final double initDist2ChevDefree = initDist2Defense + 1.5;
+			public static final double initDist2Portcul = initDist2Defense + 1.5;
+			public static final double initDist2Rampart = initDist2Defense + 1.5;
 	
-	// We are adding the distance to the beginning of the defense, to the distance to actually get to the wall
-	public static final double initDist2Wall = initDist2Defense + 1.5;
-	public static final double initDist2ChevDefree = initDist2Defense + 1.5;
-	public static final double initDist2Portcul = initDist2Defense + 1.5;
-	public static final double initDist2Rampart = initDist2Defense + 1.5;
+	// SPEEDS for working with defenses
+		public static final double initAutoSpeed = 0.8;
+		public static final double initRampartLeftSpeed = 0 ;
+		public static final double initRampartRightSpeed = 0.8;
 	
-	public static final double initAutoSpeed = 0.8;
-	public static final double initRampartLeftSpeed = 0 ;
-	public static final double initRampartRightSpeed = 0.8;
-	public static final double initRampartTime = 3;
-	public static final double initDefenseTime = 1;
+	// TIMES for working with defenses
+		public static final double initDefenseTime = 1;
+		public static final double initRampartTime = 3;
 	
-	public static final double initBrushSpeed = 0.4;
+	// INTAKE BRUSH values
+		public static final double initBrushSpeed = 0.4;
+		public static final double initBrushReverseSpeed = -0.4;
 	
-	public static final double shooterPower = 1;
-	public static final double shooterTime = 0.2;
-	public static final double clampPower = -0.5;
-	public static final double clampTime = 0.5;
+	// KICKER or SHOOTER values for power and time
+		public static final double initShooterPower = 1;
+		public static final double initShooterTime = 0.2;
+		public static final double initClampPower = -0.5;
+		public static final double initClampTime = 0.5;
+	
+	// BOOLEANS for camera and brush states
+		public static final boolean brushState = true;
+		public static final boolean cameraState = true;
+		
+	//	CAMERA pieces
+		public static int camSession;
+		public static int camFrontNumb;
+		public static int camBackNumb;
+		public static String camFront = "cam0";
+	    public static String camBack = "cam1";
+	    public static String camAlt = "cam2";
+
+    
+	
+	// default INITALIZATIONS begin here
+	public void initDefaultCommand() {
+		//BOOLEANS
+		SmartDashboard.putBoolean("brushOn",brushState);
+		SmartDashboard.putBoolean("camera",cameraState);
+		//DISTANCES
+		SmartDashboard.putNumber("dist2Defense",initDist2Defense);
+		SmartDashboard.putNumber("dist2Wall",initDist2Wall);
+		SmartDashboard.putNumber("dist2ChevDefree",initDist2ChevDefree);
+		SmartDashboard.putNumber("dist2PortCull",initDist2Portcul);
+		SmartDashboard.putNumber("dist2Rampart",initDist2Rampart);
+		//SPEEDS
+		SmartDashboard.putNumber("sp4Auto",initAutoSpeed);
+		SmartDashboard.putNumber("sp4LeftRampart", initRampartLeftSpeed);
+		SmartDashboard.putNumber("sp4RightRampart", initRampartRightSpeed);		
+		//TIMES
+		SmartDashboard.putNumber("time4Auto",initDefenseTime);
+		SmartDashboard.putNumber("time4Rampart",initRampartTime);
+		//BRUSH
+		SmartDashboard.putNumber("sp4Brush",initBrushSpeed);
+		SmartDashboard.putNumber("sp4BrushReverse",initBrushReverseSpeed);
+		//KICKER
+		SmartDashboard.putNumber("time4Shooter", initShooterTime);
+    	SmartDashboard.putNumber("pwr4Shooter", initShooterPower);
+    	SmartDashboard.putNumber("time4Clamp", initClampTime);	
+    	SmartDashboard.putNumber("pwr4Clamp", initClampPower);
+	}
 }
 
 
-/*
-double shooterPower = 1;
-	double shooterTime = 0.2;
-	double clampPower = -0.5;
-	double clampTime = 0.5;
-
-*/
