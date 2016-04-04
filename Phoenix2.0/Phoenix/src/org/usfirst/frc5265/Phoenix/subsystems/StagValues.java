@@ -29,9 +29,9 @@ public final class StagValues extends Subsystem {
 	
 	// KICKER or SHOOTER values for power and time
 		public static final double initShooterPower = 1;
-		public static final double initShooterTime = 0.2;
+		public static final double initShooterTime = 3.2;
 		public static final double initClampPower = -0.5;
-		public static final double initClampTime = 0.5;
+		public static final double initClampTime = 5.5;
 	
 	// BOOLEANS for camera and brush states
 		public static final boolean brushState = true;
@@ -56,7 +56,7 @@ public final class StagValues extends Subsystem {
 	// default INITALIZATIONS begin here
 	public void initDefaultCommand() {
 		//BOOLEANS
-		SmartDashboard.putBoolean("brushOn",brushState);
+		SmartDashboard.putBoolean("brushState",brushState);
 		SmartDashboard.putBoolean("camera",cameraState);
 		//DISTANCES
 		SmartDashboard.putNumber("dist2Defense",initDist2Defense);

@@ -71,7 +71,7 @@ public class StagArm extends PIDSubsystem {
  	public static boolean BrushStateToggle() {
  		boolean BrushState = SmartDashboard.getBoolean("brushState");
      	BrushState = !BrushState;
-     	SmartDashboard.putBoolean("brushOn",BrushState);	
+     	SmartDashboard.putBoolean("brushState",BrushState);	
      	return BrushState;
     
      }

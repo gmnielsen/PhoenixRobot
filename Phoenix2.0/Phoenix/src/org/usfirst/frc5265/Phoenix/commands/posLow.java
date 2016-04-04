@@ -12,6 +12,8 @@
 package org.usfirst.frc5265.Phoenix.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
 import org.usfirst.frc5265.Phoenix.Robot;
 
 /**
@@ -38,6 +40,7 @@ public class posLow extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
+    	Robot.stagArm.setSetpoint(SmartDashboard.getNumber("posLow"));
     }
 
     // Called repeatedly when this Command is scheduled to run
