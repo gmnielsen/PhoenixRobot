@@ -59,7 +59,7 @@ public class OI {
     public JoystickButton btnCamera;
     public JoystickButton btnLow;
     public JoystickButton btnBall;
-    public JoystickButton btnChange;
+    public JoystickButton btnStart;
     public JoystickButton btnBrush;
     public JoystickButton btnPortcul;
     public JoystickButton btnChevDefree;
@@ -82,9 +82,19 @@ public class OI {
         btnCamera = new JoystickButton(steeringWheel, 5);
         btnCamera.whenPressed(new ToggleCamera());
         
+        //789, and change is start
+        
         btnClamp = new JoystickButton(steeringWheel, 10);
         btnClamp.whenPressed(new Clamp());
         
+        btnStart = new JoystickButton(steeringWheel, 7);
+        btnStart.whenPressed(new posStart());
+        btnBall = new JoystickButton(steeringWheel, 8);
+        btnBall.whenPressed(new posBall());
+        btnLow = new JoystickButton(steeringWheel, 9);
+        btnLow.whenPressed(new posLow());
+        
+          
         /* commented out by Dr. N.
         btnRampart = new JoystickButton(steeringWheel, 1);
         btnRampart.whileHeld(new Rampart());

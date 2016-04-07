@@ -83,10 +83,10 @@ public class RobotMap {
         SmartDashboard.putNumber("potValue", stagArmArmPot.get());        
         LiveWindow.addSensor("StagArm", "ArmPot", stagArmArmPot);
         
-        stagArmLimbMotor = new Victor(2);
+        stagArmLimbMotor = new Victor(3);
         LiveWindow.addActuator("StagArm", "LimbMotor", (Victor) stagArmLimbMotor);
         
-        stagArmBrush = new Victor(3);
+        stagArmBrush = new Victor(2);
         LiveWindow.addActuator("StagArm", "Brush", (Victor) stagArmBrush);
         
 

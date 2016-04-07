@@ -46,10 +46,19 @@ public final class StagValues extends Subsystem {
 	    public static String camAlt = "cam2";
 	    
 	// ARM pot values
-	    public static final double initPosStart = .5;
+	    /*public static final double initPosStart = 4.6;
+	    public static final double initPosBall = 1.5;
+	    public static final double initPosLow = .3;
+	    public static final double initPosChange = 0.9;
+	    public static final double initPosChevDefree = 0.3;
+	    public static final double tolerance = 0.05;
+	    */
+	    public static final double initPosStart = .7;
 	    public static final double initPosBall = .5;
-	    public static final double initPosLow = .5;
-	    public static final double initPosChange = .5;
+	    public static final double initPosLow = .3;
+	    public static final double initPosChange = .6;
+	    public static final double initPosChevDefree = 0.4;
+	    public static final double tolerance = 0.1;
 	    
     
 	
@@ -84,6 +93,7 @@ public final class StagValues extends Subsystem {
     	SmartDashboard.putNumber("posStart", initPosStart);
     	SmartDashboard.putNumber("posLow", initPosLow);
     	SmartDashboard.putNumber("posChange", initPosChange);
+    	SmartDashboard.putNumber("posChevDefree", initPosChevDefree);
 	}
 }
 
