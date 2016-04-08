@@ -52,7 +52,9 @@ public class posStart extends Command {
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return (Math.abs(valuePosStart - Robot.stagArm.armPot.get())) < StagValues.tolerance ;
+        return Robot.stagArm.onTarget();
+        // originally below, commented out by Dr. N.
+        //(Math.abs(valuePosStart - Robot.stagArm.armPot.get())) < StagValues.tolerance ;
     }
 
     // Called once after isFinished returns true

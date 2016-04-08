@@ -24,8 +24,8 @@ public final class StagValues extends Subsystem {
 		public static final double initRampartTime = 3;
 	
 	// INTAKE BRUSH values
-		public static final double initBrushSpeed = 0.4;
-		public static final double initBrushReverseSpeed = -0.4;
+		public static final double initBrushSpeed = -1.0 ;
+		public static final double initBrushReverseSpeed = 0.6;
 	
 	// KICKER or SHOOTER values for power and time
 		public static final double initShooterPower = 1;
@@ -34,7 +34,7 @@ public final class StagValues extends Subsystem {
 		public static final double initClampTime = 5.5;
 	
 	// BOOLEANS for camera and brush states
-		public static final boolean brushState = true;
+		public static final boolean brushState = false;
 		public static final boolean cameraState = true;
 		
 	//	CAMERA pieces
@@ -53,9 +53,9 @@ public final class StagValues extends Subsystem {
 	    public static final double initPosChevDefree = 0.3;
 	    public static final double tolerance = 0.05;
 	    */
-	    public static final double initPosStart = .7;
-	    public static final double initPosBall = .5;
-	    public static final double initPosLow = .3;
+	    public static final double initPosStart = .86;
+	    public static final double initPosBall = .17;
+	    public static final double initPosLow = .02;
 	    public static final double initPosChange = .6;
 	    public static final double initPosChevDefree = 0.4;
 	    public static final double tolerance = 0.1;
