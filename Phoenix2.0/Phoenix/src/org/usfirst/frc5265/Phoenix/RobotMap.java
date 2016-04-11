@@ -73,6 +73,7 @@ public class RobotMap {
         LiveWindow.addSensor("StagBase", "Quadrature Encoder 1", stagBaseQuadratureEncoder1);
         stagBaseQuadratureEncoder1.setDistancePerPulse(1.0);
         stagBaseQuadratureEncoder1.setPIDSourceType(PIDSourceType.kRate);
+        
         stagKickerFront = new Victor(1);
         LiveWindow.addActuator("StagKicker", "Front", (Victor) stagKickerFront);
         

@@ -13,9 +13,7 @@ package org.usfirst.frc5265.Phoenix.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-
 import org.usfirst.frc5265.Phoenix.Robot;
-import org.usfirst.frc5265.Phoenix.subsystems.StagValues;
 
 /**
  *

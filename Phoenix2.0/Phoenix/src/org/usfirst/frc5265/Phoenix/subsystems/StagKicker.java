@@ -12,12 +12,12 @@
 package org.usfirst.frc5265.Phoenix.subsystems;
 
 import org.usfirst.frc5265.Phoenix.RobotMap;
-import org.usfirst.frc5265.Phoenix.commands.*;
+//import org.usfirst.frc5265.Phoenix.commands.*;
 import edu.wpi.first.wpilibj.SpeedController;
-import edu.wpi.first.wpilibj.Victor;
+//import edu.wpi.first.wpilibj.Victor;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+//import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 
 /**

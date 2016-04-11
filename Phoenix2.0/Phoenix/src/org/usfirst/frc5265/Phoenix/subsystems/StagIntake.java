@@ -12,9 +12,9 @@
 package org.usfirst.frc5265.Phoenix.subsystems;
 
 import org.usfirst.frc5265.Phoenix.RobotMap;
-import org.usfirst.frc5265.Phoenix.commands.*;
+//import org.usfirst.frc5265.Phoenix.commands.*;
 import edu.wpi.first.wpilibj.SpeedController;
-import edu.wpi.first.wpilibj.Victor;
+//import edu.wpi.first.wpilibj.Victor;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -49,29 +49,38 @@ public class StagIntake extends Subsystem {
     }
     
  // creating the brush state for toggling
-  	public static boolean BrushStateToggle() {
+  	public boolean BrushStateToggle() {
   		boolean BrushState = SmartDashboard.getBoolean("brushState");
       	BrushState = !BrushState;
       	SmartDashboard.putBoolean("brushState",BrushState);	
       	return BrushState;
       }
-  	
+  	public boolean reverseBrushStateToggle() {
+  		boolean reverseBrushState = SmartDashboard.getBoolean("reverseBrushState");
+  		reverseBrushState = !reverseBrushState;
+      	SmartDashboard.putBoolean("reverseBrushState",reverseBrushState);	
+      	return reverseBrushState;
+  	}
+	public boolean rampartStateToggle() {
+  		boolean rampartState = SmartDashboard.getBoolean("rampartState");
+  		rampartState = !rampartState;
+      	SmartDashboard.putBoolean("rampartState",rampartState);	
+      	return rampartState;
+	}
   	// turns the intake wheels on
-  	public static void intakeOn(){
+  	public void intakeOn(){
      	double speed = SmartDashboard.getNumber("sp4Brush");
      	//System.out.println("intake was turned on");
      	brush.set(speed); 
      	//System.out.println("Current Speed " + RobotMap.stagArmBrush.get());
-     	
      }
-  	
-  	public static void intakeReverse(){
+  	// reverses intake wheels
+  	public void intakeReverse(){
   		double speed = SmartDashboard.getNumber("sp4BrushReverse");
   		brush.set(speed);
   	}
-     
      //turns the intake wheels off
-  	public static void intakeStop(){   	
+  	public void intakeStop(){   	
      	brush.set(0);    	
      }
 }

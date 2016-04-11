@@ -48,16 +48,15 @@ public class Brush extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-  
-    	    	// is the brushstate on, then make it off, or vice versa 
-    	    	BrushState = Robot.stagIntake.BrushStateToggle();
-    	    	// test brushstate and either turn the brush motor on or off
-    	    	if (BrushState){
-    	    		Robot.stagIntake.intakeOn();
-    	    	} else {
-    	    		Robot.stagIntake.intakeStop();
-    	    	}
-    	    	System.out.println("BrushState " + BrushState);
+    	// is the brushstate on, then make it off, or vice versa 
+    	BrushState = Robot.stagIntake.BrushStateToggle();
+    	// test brushstate and either turn the brush motor on or off
+    	if (BrushState){
+    		Robot.stagIntake.intakeOn();
+    	} else {
+    		Robot.stagIntake.intakeStop();
+    	}
+    	System.out.println("BrushState " + BrushState);
     }
 
     // Called when another command which requires one or more of the same
